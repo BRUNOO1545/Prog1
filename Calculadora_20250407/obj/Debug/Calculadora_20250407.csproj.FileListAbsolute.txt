@@ -1,0 +1,7 @@
+C:\prog1\Calculadora_20250407\bin\Debug\Calculadora_20250407.exe.config
+C:\prog1\Calculadora_20250407\bin\Debug\Calculadora_20250407.exe
+C:\prog1\Calculadora_20250407\bin\Debug\Calculadora_20250407.pdb
+C:\prog1\Calculadora_20250407\obj\Debug\Calculadora_20250407.csproj.AssemblyReference.cache
+C:\prog1\Calculadora_20250407\obj\Debug\Calculadora_20250407.csproj.CoreCompileInputs.cache
+C:\prog1\Calculadora_20250407\obj\Debug\Calculadora_20250407.exe
+C:\prog1\Calculadora_20250407\obj\Debug\Calculadora_20250407.pdb
