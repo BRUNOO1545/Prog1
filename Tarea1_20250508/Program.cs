@@ -107,6 +107,18 @@ namespace Tarea1_20250508
 				Console.WriteLine();
 			}
 
+			Console.WriteLine("\n6)");
+
+			for (int f = 0; f < 4; f++)
+			{
+				for (int c = 0; c <= 4; c++)
+				{
+					Console.Write((f * c) + " ");
+				}
+
+				Console.WriteLine();
+			}
+
 
 			Thread.Sleep(50000);
 		}
