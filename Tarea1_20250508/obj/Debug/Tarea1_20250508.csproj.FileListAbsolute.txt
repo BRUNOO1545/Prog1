@@ -1,7 +1,0 @@
-C:\Prog1\Tarea1_20250508\bin\Debug\Tarea1_20250508.exe.config
-C:\Prog1\Tarea1_20250508\bin\Debug\Tarea1_20250508.exe
-C:\Prog1\Tarea1_20250508\bin\Debug\Tarea1_20250508.pdb
-C:\Prog1\Tarea1_20250508\obj\Debug\Tarea1_20250508.csproj.AssemblyReference.cache
-C:\Prog1\Tarea1_20250508\obj\Debug\Tarea1_20250508.csproj.CoreCompileInputs.cache
-C:\Prog1\Tarea1_20250508\obj\Debug\Tarea1_20250508.exe
-C:\Prog1\Tarea1_20250508\obj\Debug\Tarea1_20250508.pdb

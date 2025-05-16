@@ -1,7 +1,0 @@
-C:\prog1\Suma_20250404\bin\Debug\Suma_20250404.exe.config
-C:\prog1\Suma_20250404\bin\Debug\Suma_20250404.exe
-C:\prog1\Suma_20250404\bin\Debug\Suma_20250404.pdb
-C:\prog1\Suma_20250404\obj\Debug\Suma_20250404.csproj.AssemblyReference.cache
-C:\prog1\Suma_20250404\obj\Debug\Suma_20250404.csproj.CoreCompileInputs.cache
-C:\prog1\Suma_20250404\obj\Debug\Suma_20250404.exe
-C:\prog1\Suma_20250404\obj\Debug\Suma_20250404.pdb
