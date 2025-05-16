@@ -23,23 +23,33 @@ namespace Tarea1_20250515
 				Juegan los dos, y al final muestra los resultados indicando quien ganó y si fué un empate.
 			*/
 
-			string optionMenu;
-			bool continuePlaying;
+			string optionMenu = "";
+			bool continuePlaying = true;
 
 			do
 			{
-				continuePlaying = true;
+				#region menu principal
 
-				// menu principal
 				Console.Clear();
-				Console.Write("Bienvenido al juego de dados\n\nSeleccione una opcion para continuar:\n\n\t1) Modo un jugador.\n\t2) Modo dos jugadores.\n\t3) En que consiste el juego.\n\t4) Cerrar juego.\n\nEscriba el numero y juego presione enter.\nOpcion: ");
+
+				Console.Write("Bienvenido al juego de dados\n\n\n");
+				Console.WriteLine("Seleccione una opcion para continuar:\n");
+				Console.WriteLine("\t1) Modo un jugador.");
+				Console.WriteLine("\t2) Modo dos jugadores.");
+				Console.WriteLine("\t3) En que consiste el juego.");
+				Console.WriteLine("\t4) Cerrar juego.\n\n");
+				Console.Write("Escriba el numero y juego presione enter: ");
 				optionMenu = Console.ReadLine();
+				
+				#endregion
 
 				switch (optionMenu)
 				{
 					#region Modo 1 jugador
+
 					case "1":
 						Console.Clear();
+						Console.WriteLine("Tirando dados...");
 
 						Random rndVal = new Random();
 						int dado_1, dado_2, dado_3, total_dados;
@@ -51,8 +61,9 @@ namespace Tarea1_20250515
 						dado_3 = rndVal.Next(1, 7);
 
 						total_dados = dado_1 + dado_2 + dado_3;
-
-						Console.WriteLine($"Resultado: {total_dados} ({dado_1}, {dado_2}, {dado_3})");
+						
+						Console.Clear();
+						Console.WriteLine($"\nResultado: {total_dados} ({dado_1}, {dado_2}, {dado_3})\n");
 
 						if (total_dados > 12)
 						{
@@ -67,9 +78,11 @@ namespace Tarea1_20250515
 						Console.WriteLine("\n\n\nPresione una tecla para volver al menu principal.");
 						Console.ReadKey();
 						break;
+
 					#endregion
 
 					#region Modo 2 jugadores
+
 					case "2":
 						Console.Clear();
 
@@ -80,8 +93,11 @@ namespace Tarea1_20250515
 
 						// jugador 1
 						Console.Clear();
-						Console.WriteLine("Le toca al jugador 1:\n\nPresione Enter para continuar...");
+						Console.WriteLine("Turno del jugador 1:\n\nPresione Enter para tirar los dados...");
 						Console.ReadKey();
+						
+						Console.Clear();
+						Console.WriteLine("Tirando dados...");
 
 						dado_1_p1 = rndValP1.Next(1, 7);
 						Thread.Sleep(500);
@@ -93,8 +109,11 @@ namespace Tarea1_20250515
 
 						// jugador 2
 						Console.Clear();
-						Console.WriteLine("Le toca al jugador 2:\n\nPresione Enter para continuar...");
+						Console.WriteLine("Turno del jugador 2:\n\nPresione Enter para tirar los dados...");
 						Console.ReadKey();
+						
+						Console.Clear();
+						Console.WriteLine("Tirando dados...");
 
 						dado_1_p2 = rndValP1.Next(1, 7);
 						Thread.Sleep(500);
@@ -105,7 +124,7 @@ namespace Tarea1_20250515
 						total_dados_p2 = dado_1_p2 + dado_2_p2 + dado_3_p2;
 
 						Console.Clear();
-						Console.WriteLine($"Resultados:\n\tJugador 1: {total_dados_p1} ({dado_1_p1}, {dado_2_p1}, {dado_3_p1})\n\tJugador 2: {total_dados_p2} ({dado_1_p2}, {dado_2_p2}, {dado_3_p2})\n\n");
+						Console.WriteLine($"\nResultados:\n\tJugador 1: {total_dados_p1} ({dado_1_p1}, {dado_2_p1}, {dado_3_p1})\n\tJugador 2: {total_dados_p2} ({dado_1_p2}, {dado_2_p2}, {dado_3_p2})\n\n");
 
 						if (total_dados_p1 > total_dados_p2)
 						{
@@ -124,29 +143,40 @@ namespace Tarea1_20250515
 						Console.WriteLine("\n\n\nPresione una tecla para volver al menu principal.");
 						Console.ReadKey();
 						break;
+
 					#endregion
 
 					#region En que consiste
+
 					case "3":
 						Console.Clear();
-						Console.WriteLine("En que consiste el juego:\n\nMODO UN JUGADOR:\n\tEl jugador al tirar los dados debe superar una puntuacion mayor a 12.\n\nMODO DOS JUGADORES:\n\tEl jugador que obtenga la mayor puntuacion entre los 2 gana.");	
+
+						Console.Write("En que consiste el juego:\n\n\n");
+						Console.WriteLine("MODO UN JUGADOR:\n\tEl jugador al tirar los dados debe superar una puntuacion mayor a 12.\n");
+						Console.WriteLine("MODO DOS JUGADORES:\n\tEl jugador que obtenga la mayor puntuacion entre los 2 gana.\n\n");
+						Console.WriteLine("Precione cualquier tecla para volver al menu principal.");
 
 						Console.ReadKey();
 						break;
+
 					#endregion
 
 					#region Salir
+					
 					case "4":
 						continuePlaying = false;
 						break;
+
 					#endregion
 
 					#region Error
+
 					default:
 						Console.Clear();
 						Console.WriteLine("ERROR: El numero ingresado no corresponde a una opcion.\n\nPresione una tecla para mostrar el menu nuevamente...");
 						Console.ReadKey();
 						break;
+
 					#endregion
 				}
 			} while (continuePlaying);
