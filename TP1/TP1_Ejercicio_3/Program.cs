@@ -1,15 +1,15 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TP1_Ejercicio_2
+namespace TP1_Ejercicio_3
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
+    class Program
+    {
+        static void Main(string[] args)
+        {
 			/*
 
 			 Enunciado: Crear un programa que calcule el sueldo semanal de un empleado. El usuario debera ingresar:
@@ -29,8 +29,8 @@ namespace TP1_Ejercicio_2
 				- Mostrar resultado por consola.
 
 			*/
-			
 
-		}
-	}
+			
+        }
+    }
 }
