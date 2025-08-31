@@ -32,6 +32,7 @@ namespace TP1_Ejercicio_3
 
             int opcion;
             bool error;
+            int[] numeros = new int[5];
 
             do {
                 error = true;
@@ -71,14 +72,86 @@ namespace TP1_Ejercicio_3
                     {
                         Console.Write("\nSeleccione una opción: ");
                         opcion = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("\n\n");
+                        Console.Write("\n");
                         error = false;
                     }
                     catch
                     {
-                        Console.Write("\nError Ingrese una opción valida.\n");
+                        Console.Write("\nError ingrese una opción valida.\n");
                     }
                 }
+
+                switch (opcion)
+                {
+                    case 1: // Cargar numeros
+                        Console.Write("\nCargando números...\n");
+
+                        for (int i = 0; i < numeros.Length; i++)
+                        {
+                            error = true;
+
+                            while (error)
+                            {
+                                try
+                                {
+                                    Console.Write("Ingrese el número " + (i + 1) + ": ");
+                                    numeros[i] = Convert.ToInt32(Console.ReadLine());
+                                    error = false;
+                                }
+                                catch
+                                {
+                                    Console.Write("Error ingrese un número valido.\n");
+                                }
+                            }
+                        }
+                    break;
+
+                    case 2: // Mostrar arreglo
+                        Console.Write("\nMostrando números:\n");
+
+                        for (int i = 0; i < numeros.Length; i++)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.Write("\n- ");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.Write(numeros[i]);
+                        }
+                    break;
+
+                    case 3: // Calcular promedio
+                        Console.Write("\nEl promedio es:\n");
+
+                        int sumaNumeros = 0;
+
+                        for (int i = 0; i < numeros.Length; i++)
+                        {
+                            sumaNumeros += numeros[i];
+                        }
+
+                        Console.Write(sumaNumeros / numeros.Length);
+                    break;
+
+                    case 4: // Buscar numero
+                        Console.Write("\nIngrese el número a buscar:\n");
+                        
+                        foreach(int numero in numeros)
+                        {
+
+                        }
+                    break;
+
+                    case 5: // Salir
+                        Console.Write("\nSaliendo del programa...");
+                        Thread.Sleep(5000);
+                    break;
+
+                    default:
+                        Console.Write("\nError ingrese una opción valida.\n");
+                    break;
+                }
+
+                Console.Write("\n\n");
+
             } while (opcion != 5);
         }
     }
