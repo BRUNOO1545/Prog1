@@ -72,7 +72,6 @@ namespace TP1_Ejercicio_3
                     {
                         Console.Write("\nSeleccione una opción: ");
                         opcion = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("\n");
                         error = false;
                     }
                     catch
@@ -119,7 +118,7 @@ namespace TP1_Ejercicio_3
                     break;
 
                     case 3: // Calcular promedio
-                        Console.Write("\nEl promedio es:\n");
+                        Console.Write("\nEl promedio es: ");
 
                         int sumaNumeros = 0;
 
@@ -132,11 +131,41 @@ namespace TP1_Ejercicio_3
                     break;
 
                     case 4: // Buscar numero
-                        Console.Write("\nIngrese el número a buscar:\n");
-                        
-                        foreach(int numero in numeros)
-                        {
+                        int busqueda = 0;
+                        bool seEncuentra = false;
 
+                        error = true;
+
+                        while (error)
+                        {
+                            try
+                            {
+                                Console.Write("\nIngrese el número a buscar: ");
+                                busqueda = Convert.ToInt32(Console.ReadLine());
+                                error = false;
+                            }
+                            catch
+                            {
+                                Console.Write("\nError ingrese un número valido.\n");
+                            }
+                        }
+
+                        foreach (int numero in numeros)
+                        {
+                            if (numero == busqueda)
+                            {
+                                seEncuentra = true;
+                                break;
+                            }
+                        }
+
+                        if (seEncuentra)
+                        {
+                            Console.Write("El número " + busqueda + " se encuentra en el arreglo.");
+                        }
+                        else
+                        {
+                            Console.Write("El número " + busqueda + " no se encuentra en el arreglo.");
                         }
                     break;
 
