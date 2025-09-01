@@ -73,7 +73,14 @@ namespace TP1_Ejercicio_4
                         Console.Write("Ingrese el precio: ");
                         productoPrecio = Convert.ToDouble(Console.ReadLine());
 
-                        error = false;
+                        if (productoPrecio <= 0)
+                        {
+                            Console.Write("\nError ingrese un precio valido.\n");
+                        }
+                        else
+                        {
+                            error = false;
+                        }
                     }
                     catch
                     {
